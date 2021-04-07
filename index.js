@@ -1,6 +1,6 @@
 const bodyParser = require('body-parser')
 const express = require('express')
-const moves = require('./lib/moves.js')
+const moves = require('./lib/handle.js')
 
 const PORT = process.env.PORT || 3000
 
