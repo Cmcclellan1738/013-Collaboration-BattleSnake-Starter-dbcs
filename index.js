@@ -25,6 +25,27 @@ function handleMove(request, response) {
   var gameData = request.body
 
   var possibleMoves = ['up', 'down', 'left', 'right']
+  // var move = possibleMoves[
+  //   if (upIsBlocked) {
+  //     if (leftIsBlocked) {
+  //       turnRight();
+  //     } else {
+  //       turnLeft();
+  //     }
+  //     while (downIsClear) {
+  //       goDown();
+  //     },
+  //   if (downIsBlocked) {
+  //     if (leftIsBlocked) {
+  //       turnRight();
+  //     } else {
+  //       turnLeft();
+  //     }
+  //     while (upIsClear) {
+  //       goUp();
+  //     }
+  //   }
+  // }]
   var move = possibleMoves[Math.floor(Math.random() * possibleMoves.length)]
 
   console.log('MOVE: ' + move)
