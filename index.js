@@ -1,13 +1,13 @@
 const bodyParser = require('body-parser')
 const express = require('express')
-const moves = require('./lib/handle.js')
+const handle = require('./lib/handle.js')
 
 const PORT = process.env.PORT || 3000
 
 const app = express()
 app.use(bodyParser.json())
 
-app.get('/', moves.handleIndex)
+app.get('/', handle.handleIndex)
 app.post('/start', handleStart)
 app.post('/move', handleMove)
 app.post('/end', handleEnd)
