@@ -1,6 +1,7 @@
 const bodyParser = require('body-parser')
 const express = require('express')
 const handle = require('./lib/handle.js')
+const moves = require('./lib/moves.js')
 
 const PORT = process.env.PORT || 3000
 
@@ -25,8 +26,13 @@ function handleMove(request, response) {
   var gameData = request.body
 
   var possibleMoves = ['up', 'down', 'left', 'right']
-  // var move = possibleMoves[
-  //   if (upIsBlocked) {
+  var head = gameData.you.head
+  var height = gameData.board.height
+
+  var move = possibleMoves[3]
+    if (moves.canMoveUp(head.y, height)) {
+      move = possibleMoves[0]
+    }
   //     if (leftIsBlocked) {
   //       turnRight();
   //     } else {
@@ -46,7 +52,7 @@ function handleMove(request, response) {
   //     }
   //   }
   // }]
-  var move = possibleMoves[Math.floor(Math.random() * possibleMoves.length)]
+  // var move = possibleMoves[Math.floor(Math.random() * possibleMoves.length)]
 
   console.log('MOVE: ' + move)
   response.status(200).send({
