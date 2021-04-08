@@ -3,5 +3,6 @@
   "author": "DaBaby and Afghan Istan.",
   "color": "#000000",
   "head": "workout",
-  "tail": "hook"
+  "tail": "hook",
+  "logStartEnd": false
 }
